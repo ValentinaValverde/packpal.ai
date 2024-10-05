@@ -27,35 +27,47 @@ export default function Home() {
   return (
     <>
       <div className={styles.main}>
-        <h1 style={{ fontSize: 50 }}>
-          Streamline Your Quotes with AI-Powered Inventory Management
-        </h1>
-        <Spacer height={10} />
-        <p>
-          Pack Pal transforms the quoting process for moving companies by
-          utilizing AI technology. Customers simply take a photo, and our AI
-          generates a comprehensive inventory list and an accurate quote,
-          drastically reducing time spent on manual estimates.
-        </p>
-        <Spacer height={20} />
-        <Button text={'Try it Out'} type="secondary" />
+        <div style={{ maxWidth: 700 }}>
+          <h1 style={{ fontSize: 50 }}>
+            Streamline Your Quotes with <br /> AI-Powered Inventory Management
+          </h1>
+          <Spacer height={10} />
+          <p>
+            Pack Pal transforms the quoting process for moving companies by
+            utilizing AI technology. Customers simply take a photo, and our AI
+            generates a comprehensive inventory list and an accurate quote,
+            drastically reducing time spent on manual estimates.
+          </p>
+          <Spacer height={20} />
+          <Button text={'Try it Out'} type="secondary" />
+        </div>
       </div>
       <Spacer height={50} />
-      <div style={{ padding: 20 }}>
-        <b>What is it?</b>
-        <Spacer height={20} />
-        <p className={styles.large_text}>
-          Turn Days <br /> Into{' '}
-          <span className={styles.red_text}> Minutes</span>
-        </p>
-        <Spacer height={10} />
-        <p>
-          We’ve created a powerful tool that will superpower your quoting
-          process.
-          <br />
-          Lorem ipsum tincidunt Nunc facilisis Nam dignissim, eget fringilla
-          elementum Quisque adipiscing tortor.
-        </p>
+      <div
+        style={{
+          padding: 20,
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          alignItems: 'center',
+        }}
+      >
+        <div style={{ maxWidth: 700 }}>
+          <b>What is it?</b>
+          <Spacer height={20} />
+          <p className={styles.large_text}>
+            Turn Days Into <span className={styles.red_text}> Minutes</span>
+          </p>
+          <Spacer height={10} />
+          <p>
+            In the fast-paced world of moving, every minute counts. Frustrated
+            by the time-consuming process of generating quotes, we created Pack
+            Pal to revolutionize how moving companies operate. Our solution
+            empowers you to offer quick, accurate, and reliable services to your
+            customers. With Pack Pal, you can focus on what you do
+            best—providing exceptional moving experiences.
+          </p>
+        </div>
       </div>
       <Spacer height={50} />
       <div style={{ padding: 20 }}>

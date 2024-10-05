@@ -57,5 +57,9 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'OstrichSans', sans-serif; /* Fallback font */
+  font-family: 'OstrichSans';
+}
+
+button:hover {
+  cursor: pointer;
 }

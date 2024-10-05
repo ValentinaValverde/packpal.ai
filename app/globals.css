@@ -63,3 +63,16 @@ h6 {
 button:hover {
   cursor: pointer;
 }
+
+a {
+  color: var(--white);
+  text-decoration: none;
+}
+
+button {
+  transition: 0.5s;
+}
+
+button:hover {
+  box-shadow: 5px 5px 0 0 var(--brown);
+}

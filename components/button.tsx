@@ -9,8 +9,10 @@ export default function Button({
   text: string;
   type?: 'primary' | 'secondary';
 }) {
-  // const buttonClass = type === 'primary' ? styles.primary_button : styles.secondary_button;
-  //
+  // document?.querySelector('#chat')?.scrollTo({
+  //   behavior: 'smooth',
+  // });
+
   return (
     <a href={link}>
       {type === 'primary' ? (

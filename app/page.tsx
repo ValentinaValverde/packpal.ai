@@ -2,7 +2,7 @@ import Image from 'next/image';
 import styles from '@/app/page.module.css';
 import Spacer from '@/components/spacer';
 import InfoCard from '@/components/info-card';
-import Logo from '@/public/packpal-logo.svg';
+import Logo from '@/public/packpal-full.svg';
 import Button from '@/components/button';
 
 export default function Home() {
@@ -109,14 +109,13 @@ export default function Home() {
         <Image
           src={Logo}
           alt="Pack Pal Logo"
-          style={{ width: 100, height: 'auto' }}
+          style={{ width: 300, height: 'auto' }}
         />
         <Spacer height={0} />
-        <p className={styles.large_text} style={{ textAlign: 'center' }}>
-          Add some
-          <span className={styles.red_text}> Magic</span>
-          <br />
-          to your process
+        <p style={{ textAlign: 'center', color: 'var(--white)' }}>
+          Add Some
+          <span className={styles.red_text}> Magic </span>
+          to Your Process
         </p>
         <Spacer height={0} />
         <Button text={'Contact us!'} type="secondary" />

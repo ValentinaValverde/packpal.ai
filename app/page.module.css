@@ -4,10 +4,12 @@
   color: var(--white);
   border-radius: 0px 0px 10px 10px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   padding-top: 150px;
   padding-bottom: 150px;
+  text-align: center;
 }
 
 .large_text {
@@ -36,7 +38,7 @@
 
 .end {
   padding: 20px;
-  background-color: var(--white);
+  background-color: var(--brown);
   color: var(--brown);
   border-radius: 10px 10px 0px 0px;
   padding-top: 150px;

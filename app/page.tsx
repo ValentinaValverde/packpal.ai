@@ -70,22 +70,45 @@ export default function Home() {
         </div>
       </div>
       <Spacer height={50} />
-      <div style={{ padding: 20 }}>
-        <b>How does it work?</b>
-        <Spacer height={20} />
-        {data.map((info) => {
-          console.log('INFO: ', info);
-          return (
-            <>
-              <InfoCard
-                // photo={info.photo}
-                title={info.title}
-                text={info.text}
-              />
-              <Spacer height={40} />
-            </>
-          );
-        })}
+      <div
+        style={{
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          flexDirection: 'column',
+        }}
+      >
+        <div
+          style={{
+            padding: 20,
+            maxWidth: 700,
+          }}
+        >
+          <b>How does it work?</b>
+          <Spacer height={20} />
+          <div
+            style={{
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'center',
+              alignItems: 'center',
+            }}
+          >
+            {data.map((info) => {
+              console.log('INFO: ', info);
+              return (
+                <>
+                  <InfoCard
+                    // photo={info.photo}
+                    title={info.title}
+                    text={info.text}
+                  />
+                  <Spacer height={40} />
+                </>
+              );
+            })}
+          </div>
+        </div>
       </div>
       <Spacer height={50} />
       <div

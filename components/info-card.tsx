@@ -18,7 +18,7 @@ export default function InfoCard({
         <Image
           src={photo || PlaceholderImage}
           alt="Card Image"
-          style={{ width: 100, height: 'auto' }}
+          // style={{ width: 100, height: 'auto' }}
         />
       </div>
       <div>

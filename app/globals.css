@@ -1,4 +1,4 @@
-:root {
+/* :root {
   --background: #ffffff;
   --foreground: #171717;
 }
@@ -8,6 +8,13 @@
     --background: #0a0a0a;
     --foreground: #ededed;
   }
+} */
+
+:root {
+  --white: #fcfafa;
+  --khaki: #c3a995;
+  --brown: #2f2504;
+  --red: #d62828;
 }
 
 html,
@@ -17,11 +24,9 @@ body {
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  /* color: var(--foreground); */
+  background: var(--khaki);
+  font-family: 'Nunito';
 }
 
 * {
@@ -30,13 +35,26 @@ body {
   margin: 0;
 }
 
-a {
+/* a {
   color: inherit;
   text-decoration: none;
+} */
+
+@font-face {
+  font-family: 'Nunito';
+  src: url('../app/fonts/Nunito/Nunito-Medium.ttf') format('truetype');
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+@font-face {
+  font-family: 'OstrichSans';
+  src: url('../app/fonts/OstrichSans-Heavy.otf') format('opentype');
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'OstrichSans', sans-serif; /* Fallback font */
 }

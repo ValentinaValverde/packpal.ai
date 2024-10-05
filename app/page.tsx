@@ -40,6 +40,7 @@ export default function Home() {
           </p>
           <Spacer height={20} />
           <Button text={'Try it Out'} type="secondary" />
+          {/* <button className={styles.secondary_button} >Try it Out</button> */}
         </div>
       </div>
       <Spacer height={50} />
@@ -141,7 +142,11 @@ export default function Home() {
           to Your Process
         </p>
         <Spacer height={0} />
-        <Button text={'Contact us!'} type="secondary" />
+        <Button
+          text={'Contact us!'}
+          type="secondary"
+          link="mailto:hunter@chipp.ai"
+        />
       </div>
     </>
   );

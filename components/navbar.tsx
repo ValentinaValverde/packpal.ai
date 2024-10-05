@@ -20,7 +20,11 @@ export default function Navbar() {
           PACKPAL.AI
         </p>
       </div>
-      <Button text={'Contact Us!'} type="secondary" />
+      <Button
+        text={'Contact Us!'}
+        type="secondary"
+        link="mailto:hunter@chipp.ai"
+      />
     </div>
   );
 }

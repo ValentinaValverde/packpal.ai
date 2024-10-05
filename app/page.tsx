@@ -4,7 +4,6 @@ import Spacer from '@/components/spacer';
 import InfoCard from '@/components/info-card';
 import Logo from '@/public/packpal-full.svg';
 import Button from '@/components/button';
-import { Link } from 'react-scroll';
 
 export default function Home() {
   const data = [
@@ -40,10 +39,7 @@ export default function Home() {
             drastically reducing time spent on manual estimates.
           </p>
           <Spacer height={20} />
-          <Button text={'Try it Out'} type="secondary" />
-          <Link to="chat" smooth={true} duration={900}>
-            <button className={styles.secondary_button}>Try it Out</button>
-          </Link>
+          <Button text={'Try it Out'} type="secondary" link="#chat" />
         </div>
       </div>
       <Spacer height={50} />

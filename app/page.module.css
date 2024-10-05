@@ -9,3 +9,74 @@
   padding-top: 150px;
   padding-bottom: 150px;
 }
+
+.large_text {
+  font-size: 60px;
+  font-family: 'OstrichSans';
+  color: var(--white);
+  line-height: 50px;
+}
+
+.large_text_brown {
+  font-size: 60px;
+  font-family: 'OstrichSans';
+  line-height: 50px;
+}
+
+.red_text {
+  color: var(--red);
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  gap: 20px;
+}
+
+.end {
+  padding: 20px;
+  background-color: var(--white);
+  color: var(--brown);
+  border-radius: 10px 10px 0px 0px;
+  padding-top: 150px;
+  padding-bottom: 150px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.primary_button {
+  background-color: var(--brown);
+  color: var(--white);
+  padding: 10px 20px 10px 20px;
+  border: none;
+  border-radius: 10px;
+  font-family: 'Nunito';
+  font-size: 20px;
+}
+
+.secondary_button {
+  background-color: var(--white);
+  /* color: var(--brown); */
+  padding: 10px 20px 10px 20px;
+  border: none;
+  border-radius: 10px;
+  font-family: 'Nunito';
+  font-size: 20px;
+}
+
+.nav {
+  background-color: var(--brown);
+  padding: 20px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  border-radius: 0px 0px 10px 10px;
+}

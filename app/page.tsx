@@ -9,12 +9,12 @@ import Link from "next/link";
 export default function Home() {
   const data = [
     {
-      image: "",
+      image: "/photo-example.jpg",
       title: "Snap a Pic",
       text: "No more tedious manual input. Pack Pal allows your customers to simply take a photo of their belongings. Our sophisticated AI technology analyzes the image, capturing every detail to ensure nothing is overlooked. With just one click, the moving process begins with unprecedented ease.",
     },
     {
-      image: "",
+      image: "/inventory_list.png",
       title: "Receive the list",
       text: "Leveraging state-of-the-art AI, Pack Pal automatically generates a comprehensive inventory list from the photo. This detailed list is accurate and organized, allowing your team to have a clear understanding of what needs to be moved, ensuring a seamless moving day experience.",
     },
@@ -37,7 +37,7 @@ export default function Home() {
           }}
         >
           <h1 style={{ fontSize: 50 }}>
-            Streamline Your Quotes with <br /> AI-Powered Inventory Management
+            Streamline Your Quotes with <br /> AI-Powered Inventory Recognition
           </h1>
           <Spacer height={10} />
           <p>
@@ -137,7 +137,7 @@ export default function Home() {
               return (
                 <>
                   <InfoCard
-                    // photo={info.photo}
+                    photo={info.image}
                     title={info.title}
                     text={info.text}
                   />

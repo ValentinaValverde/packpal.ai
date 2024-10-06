@@ -1,7 +1,7 @@
-import styles from '@/app/page.module.css';
-import PlaceholderImage from '@/public/packpal-logo.svg';
-import Spacer from '@/components/spacer';
-import Image from 'next/image';
+import styles from "@/app/page.module.css";
+import PlaceholderImage from "@/public/packpal-logo.svg";
+import Spacer from "@/components/spacer";
+import Image from "next/image";
 
 export default function InfoCard({
   photo,
@@ -14,11 +14,19 @@ export default function InfoCard({
 }) {
   return (
     <div className={styles.card}>
-      <div>
+      <div
+        style={{ position: "relative", minWidth: "329px", minHeight: "314px" }}
+      >
         <Image
           src={photo || PlaceholderImage}
           alt="Card Image"
-          // style={{ width: 100, height: 'auto' }}
+          fill
+          objectFit="cover"
+          style={{
+            borderRadius: "6px",
+            border: "12px solid var(--brown)",
+            boxShadow: "6px 9px 0px black",
+          }}
         />
       </div>
       <div>

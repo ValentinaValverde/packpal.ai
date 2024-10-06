@@ -37,7 +37,14 @@ export default function Home() {
             alignItems: 'center',
           }}
         >
-          <div>
+          <div
+            style={{
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'center',
+              alignItems: 'center',
+            }}
+          >
             <Image
               src={MistralLogo}
               alt="Mistral Logo"
@@ -56,8 +63,6 @@ export default function Home() {
             </p>
             <Spacer height={20} />
           </div>
-
-          <p className="text-3xl font-bold underline">HELLO WORLD</p>
 
           <h1 style={{ fontSize: 50 }}>
             Streamline Your Quotes with <br /> AI-Powered Inventory Recognition

@@ -50,23 +50,32 @@ export default function Home() {
           <Link href="#chat">
             <button className={styles.secondary_button}>Try it Out</button>
           </Link>
-          <Spacer height={100} />
           <div
             style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
               marginRight: "auto",
               width: "100%",
+              fontSize: "12px",
+              letterSpacing: "0.2em",
+              textTransform: "uppercase",
+              position: "absolute",
+              bottom: "-45px",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              justifyContent: "center",
+              gap: 10,
+              color: "var(--khaki)",
             }}
           >
-            Powered by{" "}
+            Powered by
             <Image
-              src="/mistral_logo.png"
+              src="/mistral_logo.webp"
               alt="Mistral Logo"
-              width={153}
-              height={63}
-              style={{ marginLeft: 10, border: "2px solid var(--khaki)" }}
+              width={128}
+              height={41}
+              style={{
+                border: "2px solid var(--khaki)",
+              }}
             />
           </div>
         </div>

@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from '@/app/page.module.css';
 import Button from './button';
 import Image from 'next/image';
@@ -12,6 +12,25 @@ import Spacer from './spacer';
 
 export default function Navbar() {
   const [showSidebar, setShowSidebar] = useState(false);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      const sidebar = document.getElementById('sidebar'); // Add an ID to the sidebar
+      if (sidebar && !sidebar.contains(event.target as Node)) {
+        setShowSidebar(false);
+      }
+    };
+
+    if (showSidebar) {
+      document.addEventListener('mousedown', handleClickOutside);
+    } else {
+      document.removeEventListener('mousedown', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [showSidebar]);
 
   return (
     <div className={styles.nav}>
@@ -70,10 +89,8 @@ export default function Navbar() {
               display: 'flex',
               flexDirection: 'column',
               alignItems: 'flex-end',
-              // gap: 20,
-
-              // transition: '0.5s',
             }}
+            id="sidebar"
           >
             <Image
               src={close}

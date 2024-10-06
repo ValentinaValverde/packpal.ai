@@ -2,7 +2,7 @@ import styles from '@/app/page.module.css';
 // import InfoCard from '@/components/info-card';
 import Spacer from '@/components/spacer';
 import Image from 'next/image';
-import PlaceholderImage from '@/public/packpal-logo.svg';
+import PlaceholderImage from '@/public/placeholder-img.png';
 import Logo from '@/public/packpal-full.svg';
 import Button from '@/components/button';
 
@@ -37,7 +37,11 @@ export default function Page() {
                 <Image
                   src={PlaceholderImage}
                   alt="Card Image"
-                  // style={{ width: 100, height: 'auto' }}
+                  style={{
+                    borderRadius: '10px',
+                    border: '8px solid var(--brown)',
+                    boxShadow: '5px 5px 0px #897668',
+                  }}
                 />
               </div>
               <div>
@@ -66,7 +70,11 @@ export default function Page() {
                 <Image
                   src={PlaceholderImage}
                   alt="Card Image"
-                  // style={{ width: 100, height: 'auto' }}
+                  style={{
+                    borderRadius: '10px',
+                    border: '8px solid var(--brown)',
+                    boxShadow: '5px 5px 0px #897668',
+                  }}
                 />
               </div>
             </div>
@@ -77,7 +85,11 @@ export default function Page() {
                 <Image
                   src={PlaceholderImage}
                   alt="Card Image"
-                  // style={{ width: 100, height: 'auto' }}
+                  style={{
+                    borderRadius: '10px',
+                    border: '8px solid var(--brown)',
+                    boxShadow: '5px 5px 0px #897668',
+                  }}
                 />
               </div>
               <div>

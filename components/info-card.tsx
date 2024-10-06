@@ -1,5 +1,5 @@
 import styles from '@/app/page.module.css';
-import PlaceholderImage from '@/public/packpal-logo.svg';
+import PlaceholderImage from '@/public/placeholder-img.png';
 import Spacer from '@/components/spacer';
 import Image from 'next/image';
 

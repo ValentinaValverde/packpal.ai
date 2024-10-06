@@ -159,3 +159,22 @@
   justify-content: center;
   gap: 10px;
 }
+
+/* .test{
+  transform: showSidebar ? 'translateX(0)' : 'translateX(100%)',
+  transition: 'transform 1s ease',
+} */
+
+.test {
+  position: absolute;
+  background-color: var(--white);
+  right: 0;
+  top: 0;
+  padding: 20px;
+  border-radius: 10px 0px 0px 10px;
+  height: 100vh;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}

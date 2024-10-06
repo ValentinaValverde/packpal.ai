@@ -74,24 +74,9 @@ export default function Navbar() {
           }}
         />
       </div>
-      {showSidebar ? (
+      {showSidebar && (
         <>
-          <div
-            style={{
-              position: 'absolute',
-              backgroundColor: 'var(--white)',
-              right: 0,
-              top: 0,
-              padding: 20,
-              borderRadius: '10px 0px 0px 10px',
-              height: '100vh',
-              width: '50%',
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'flex-end',
-            }}
-            id="sidebar"
-          >
+          <div className={styles.test} id="sidebar">
             <Image
               src={close}
               alt="Hamburger Icon"
@@ -133,7 +118,7 @@ export default function Navbar() {
             />
           </div>
         </>
-      ) : null}
+      )}
     </div>
   );
 }

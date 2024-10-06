@@ -1,13 +1,17 @@
-import React from 'react';
+'use client';
+
+import React, { useState } from 'react';
 import styles from '@/app/page.module.css';
 import Button from './button';
 import Image from 'next/image';
 import Logo from '@/public/packpal-logo.svg';
 import Link from 'next/link';
-// import { useMediaQuery } from 'react-responsive';
+import burger from '@/public/burger.svg';
+import close from '@/public/close.svg';
+import Spacer from './spacer';
 
 export default function Navbar() {
-  // const isDesktop = useMediaQuery({ minWidth: 992 });
+  const [showSidebar, setShowSidebar] = useState(false);
 
   return (
     <div className={styles.nav}>
@@ -25,7 +29,7 @@ export default function Navbar() {
           PACKPAL.AI
         </Link>
       </div>
-      <div>
+      <div className="hidden md:block ">
         <Link href={'/pricing'} style={{ marginRight: 15 }}>
           Pricing
         </Link>
@@ -39,6 +43,80 @@ export default function Navbar() {
           link="mailto:hunter@chipp.ai"
         />
       </div>
+      <div className="lg:hidden md:hidden">
+        <Image
+          src={burger}
+          alt="Hamburger Icon"
+          width="40"
+          height="40"
+          style={{ color: 'var(--white)' }}
+          onClick={() => {
+            setShowSidebar(!showSidebar);
+          }}
+        />
+      </div>
+      {showSidebar ? (
+        <>
+          <div
+            style={{
+              position: 'absolute',
+              backgroundColor: 'var(--white)',
+              right: 0,
+              top: 0,
+              padding: 20,
+              borderRadius: '10px 0px 0px 10px',
+              height: '100vh',
+              width: '50%',
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'flex-end',
+              // gap: 20,
+
+              // transition: '0.5s',
+            }}
+          >
+            <Image
+              src={close}
+              alt="Hamburger Icon"
+              width="40"
+              height="40"
+              style={{ color: 'var(--white)' }}
+              onClick={() => {
+                setShowSidebar(!showSidebar);
+              }}
+            />
+            <Spacer height={20} />
+
+            <Link
+              href={'/pricing'}
+              style={{ color: 'var(--brown)', fontSize: 20 }}
+              onClick={() => {
+                setShowSidebar(false);
+              }}
+            >
+              Pricing
+            </Link>
+            <Spacer height={10} />
+
+            <Link
+              href={'/how-it-works'}
+              style={{ color: 'var(--brown)', fontSize: 20 }}
+              onClick={() => {
+                setShowSidebar(false);
+              }}
+            >
+              How it Works
+            </Link>
+            <Spacer height={20} />
+
+            <Button
+              text={'Contact Us!'}
+              type="primary"
+              link="mailto:hunter@chipp.ai"
+            />
+          </div>
+        </>
+      ) : null}
     </div>
   );
 }

@@ -76,14 +76,22 @@
   border-radius: 0px 0px 10px 10px;
 }
 
-@media only screen and (min-width: 992px) {
-  .card {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    max-width: 800px;
-  }
+/* @media only screen and (min-width: 992px) { */
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  max-width: 800px;
+}
+/* } */
+
+.reverse_card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  max-width: 800px;
 }
 
 .price_card {
@@ -110,6 +118,16 @@
     align-items: center;
     text-align: center;
     /* align-items: center; */
+    gap: 20px;
+    max-width: 500px;
+  }
+
+  .reverse_card {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     gap: 20px;
     max-width: 500px;
   }

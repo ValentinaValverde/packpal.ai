@@ -74,5 +74,5 @@ button {
 }
 
 button:hover {
-  box-shadow: 5px 5px 0 0 var(--brown);
+  box-shadow: 5px 5px 0 0 #897668;
 }

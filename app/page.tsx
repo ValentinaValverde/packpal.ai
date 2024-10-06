@@ -10,7 +10,7 @@ import MistralLogo from '@/public/mistral_icon.png';
 export default function Home() {
   const data = [
     {
-      image: '/photo-example.jpg',
+      image: '/image.png',
       title: 'Snap a Pic',
       text: 'No more tedious manual input. Pack Pal allows your customers to simply take a photo of their belongings. Our sophisticated AI technology analyzes the image, capturing every detail to ensure nothing is overlooked. With just one click, the moving process begins with unprecedented ease.',
     },
@@ -38,6 +38,12 @@ export default function Home() {
           }}
         >
           <div>
+            <Image
+              src={MistralLogo}
+              alt="Mistral Logo"
+              style={{ height: 'auto', width: 50 }}
+            />
+            <Spacer height={10} />
             <p
               style={{
                 fontSize: 12,
@@ -46,16 +52,13 @@ export default function Home() {
                 color: 'var(--khaki)',
               }}
             >
-              <Image
-                src={MistralLogo}
-                alt="Mistral Logo"
-                style={{ height: 'auto', width: 50 }}
-              />
-              <Spacer height={10} />
               Powered by MistralAI
             </p>
             <Spacer height={20} />
           </div>
+
+          <p className="text-3xl font-bold underline">HELLO WORLD</p>
+
           <h1 style={{ fontSize: 50 }}>
             Streamline Your Quotes with <br /> AI-Powered Inventory Recognition
           </h1>

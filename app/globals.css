@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 /* :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -25,7 +29,7 @@ body {
 body {
   /* color: var(--foreground); */
   background: var(--khaki);
-  font-family: "Nunito";
+  font-family: 'Nunito';
   color: var(--brown);
 }
 
@@ -41,13 +45,13 @@ body {
 } */
 
 @font-face {
-  font-family: "Nunito";
-  src: url("../app/fonts/Nunito/Nunito-Medium.ttf") format("truetype");
+  font-family: 'Nunito';
+  src: url('../app/fonts/Nunito/Nunito-Medium.ttf') format('truetype');
 }
 
 @font-face {
-  font-family: "OstrichSans";
-  src: url("../app/fonts/OstrichSans-Heavy.otf") format("opentype");
+  font-family: 'OstrichSans';
+  src: url('../app/fonts/OstrichSans-Heavy.otf') format('opentype');
 }
 
 h1,
@@ -56,7 +60,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "OstrichSans";
+  font-family: 'OstrichSans';
 }
 
 button:hover {

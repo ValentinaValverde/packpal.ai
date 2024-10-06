@@ -1,34 +1,41 @@
-import Image from 'next/image';
-import styles from '@/app/page.module.css';
-import Spacer from '@/components/spacer';
-import InfoCard from '@/components/info-card';
-import Logo from '@/public/packpal-full.svg';
-import Button from '@/components/button';
-import Link from 'next/link';
+import Image from "next/image";
+import styles from "@/app/page.module.css";
+import Spacer from "@/components/spacer";
+import InfoCard from "@/components/info-card";
+import Logo from "@/public/packpal-full.svg";
+import Button from "@/components/button";
+import Link from "next/link";
 
 export default function Home() {
   const data = [
     {
-      image: '',
-      title: 'Snap a Pic',
-      text: 'No more tedious manual input. Pack Pal allows your customers to simply take a photo of their belongings. Our sophisticated AI technology analyzes the image, capturing every detail to ensure nothing is overlooked. With just one click, the moving process begins with unprecedented ease.',
+      image: "",
+      title: "Snap a Pic",
+      text: "No more tedious manual input. Pack Pal allows your customers to simply take a photo of their belongings. Our sophisticated AI technology analyzes the image, capturing every detail to ensure nothing is overlooked. With just one click, the moving process begins with unprecedented ease.",
     },
     {
-      image: '',
-      title: 'Receive the list',
-      text: 'Leveraging state-of-the-art AI, Pack Pal automatically generates a comprehensive inventory list from the photo. This detailed list is accurate and organized, allowing your team to have a clear understanding of what needs to be moved, ensuring a seamless moving day experience.',
+      image: "",
+      title: "Receive the list",
+      text: "Leveraging state-of-the-art AI, Pack Pal automatically generates a comprehensive inventory list from the photo. This detailed list is accurate and organized, allowing your team to have a clear understanding of what needs to be moved, ensuring a seamless moving day experience.",
     },
     {
-      image: '',
-      title: 'Generate a Quote',
-      text: 'Time is money. Our AI swiftly analyzes the inventory and calculates a precise quote, giving your customers instant pricing transparency. This not only speeds up the decision-making process but also enhances trust and satisfaction.',
+      image: "",
+      title: "Generate a Quote",
+      text: "Time is money. Our AI swiftly analyzes the inventory and calculates a precise quote, giving your customers instant pricing transparency. This not only speeds up the decision-making process but also enhances trust and satisfaction.",
     },
   ];
 
   return (
     <>
       <div className={styles.main}>
-        <div style={{ maxWidth: 700 }}>
+        <div
+          style={{
+            maxWidth: 700,
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+          }}
+        >
           <h1 style={{ fontSize: 50 }}>
             Streamline Your Quotes with <br /> AI-Powered Inventory Management
           </h1>
@@ -43,16 +50,35 @@ export default function Home() {
           <Link href="#chat">
             <button className={styles.secondary_button}>Try it Out</button>
           </Link>
+          <Spacer height={100} />
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              marginRight: "auto",
+              width: "100%",
+            }}
+          >
+            Powered by{" "}
+            <Image
+              src="/mistral_logo.png"
+              alt="Mistral Logo"
+              width={153}
+              height={63}
+              style={{ marginLeft: 10, border: "2px solid var(--khaki)" }}
+            />
+          </div>
         </div>
       </div>
       <Spacer height={50} />
       <div
         style={{
           padding: 20,
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'center',
-          alignItems: 'center',
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
         }}
       >
         <div style={{ maxWidth: 700 }}>
@@ -75,10 +101,10 @@ export default function Home() {
       <Spacer height={50} />
       <div
         style={{
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-          flexDirection: 'column',
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          flexDirection: "column",
         }}
       >
         <div
@@ -91,14 +117,14 @@ export default function Home() {
           <Spacer height={20} />
           <div
             style={{
-              display: 'flex',
-              flexDirection: 'column',
-              justifyContent: 'center',
-              alignItems: 'center',
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              alignItems: "center",
             }}
           >
             {data.map((info) => {
-              console.log('INFO: ', info);
+              console.log("INFO: ", info);
               return (
                 <>
                   <InfoCard
@@ -117,7 +143,7 @@ export default function Home() {
       <div
         style={{
           padding: 20,
-          backgroundColor: 'var(--white)',
+          backgroundColor: "var(--white)",
           borderRadius: 10,
           paddingBottom: 200,
         }}
@@ -127,7 +153,7 @@ export default function Home() {
           height="800px"
           width="100%"
           title="PackPal.ai"
-          style={{ border: 'none' }}
+          style={{ border: "none" }}
           id="chat"
         ></iframe>
       </div>
@@ -136,17 +162,17 @@ export default function Home() {
         <Image
           src={Logo}
           alt="Pack Pal Logo"
-          style={{ width: 300, height: 'auto' }}
+          style={{ width: 300, height: "auto" }}
         />
         <Spacer height={0} />
-        <p style={{ textAlign: 'center', color: 'var(--white)' }}>
+        <p style={{ textAlign: "center", color: "var(--white)" }}>
           Add Some
           <span className={styles.red_text}> Magic </span>
           to Your Process
         </p>
         <Spacer height={0} />
         <Button
-          text={'Contact us!'}
+          text={"Contact us!"}
           type="secondary"
           link="mailto:hunter@chipp.ai"
         />
